@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Gabriel's Developer Portfolio showcasing projects, skills, and contact information.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel's Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav role="navigation" aria-label="Main Navigation">
+            <ul>
+                <li><a href="#about-me" tabindex="0">About Me</a></li>
+                <li><a href="#projects" tabindex="0">Projects</a></li>
+                <li><a href="#skills" tabindex="0">Skills</a></li>
+                <li><a href="#contact" tabindex="0">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Gabriel's Developer Portfolio</h1>
+    </header>
+
+    <main>
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>
+                Hi, I'm Gabriel, a passionate developer with experience in building web applications and solving real-world problems with code.
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <article>
+                <figure>
+                    <img src="project1.png" alt="Screenshot of Weather App project" />
+                    <figcaption>Weather App - A responsive app providing real-time weather updates.</figcaption>
+                </figure>
+            </article>
+            <article>
+                <figure>
+                    <img src="project2.png" alt="Screenshot of Task Manager project" />
+                    <figcaption>Task Manager - An intuitive tool for managing daily tasks efficiently.</figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Git & GitHub</li>
+                <li>Accessibility</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required aria-required="true">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required aria-required="true">
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gabriel. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+/* Basic Styles */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+    color: #222;
+}
+
+/* Header and Navigation */
+header {
+    background: linear-gradient(90deg, #4f8cff 0%, #6ee7b7 100%);
+    padding: 32px 0 16px 0;
+    text-align: center;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 12px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #222;
+}
+
+/* About Me Section */
+#about {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 24px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(79, 140, 255, 0.08);
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* Projects Section */
+#projects {
+    max-width: 1100px;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(79, 140, 255, 0.08);
+    padding: 24px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: box-shadow 0.2s;
+}
+
+.project-card:hover {
+    box-shadow: 0 4px 16px rgba(79, 140, 255, 0.16);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.project-card p {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* Skills Section */
+#skills {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 24px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(79, 140, 255, 0.08);
+}
+
+#skills h2 {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+}
+
+.skills-list li {
+    position: relative;
+    padding-left: 28px;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.skills-list li::before {
+    content: "✔️";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.1rem;
+    color: #4f8cff;
+}
+
+/* Contact Form Section */
+#contact {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 24px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(79, 140, 255, 0.08);
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: 1px solid #cfd8dc;
+    border-radius: 6px;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #4f8cff;
+    outline: none;
+}
+
+button {
+    background: #4f8cff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #2563eb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    #projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%;
+    }
+}
+
+/* Hamburger Menu Icon for Mobile */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+}
+
+.hamburger span,
+.hamburger span::before,
+.hamburger span::after {
+    display: block;
+    background: #fff;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.hamburger span::before,
+.hamburger span::after {
+    content: '';
+    position: absolute;
+}
+
+.hamburger span::before {
+    top: -10px;
+}
+
+.hamburger span::after {
+    top: 10px;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    nav {
+        display: none;
+    }
+    nav.active {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+/* Responsive Images and Videos */
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Vendor Prefixes for Cross-Browser Compatibility */
+.project-card {
+    box-shadow: 0 2px 8px rgba(79, 140, 255, 0.08);
+    -webkit-box-shadow: 0 2px 8px rgba(79, 140, 255, 0.08);
+    -moz-box-shadow: 0 2px 8px rgba(79, 140, 255, 0.08);
+    transition: box-shadow 0.2s;
+    -webkit-transition: box-shadow 0.2s;
+    -moz-transition: box-shadow 0.2s;
+}
+
+button {
+    transition: background 0.2s;
+    -webkit-transition: background 0.2s;
+    -moz-transition: background 0.2s;
+}
